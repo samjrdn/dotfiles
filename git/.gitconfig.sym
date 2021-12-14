@@ -5,6 +5,14 @@
 [alias]
   default-branch = !git symbolic-ref refs/remotes/origin/HEAD | cut -f4 -d/
   start          = !git checkout $(git default-branch) && git pull && git clean -fd
+  a = add
+  b = branch
+  c = commit
+  co = checkout
+  d = diff
+  r = branch --sort=committerdate
+  s = status
+  shove = push --force-with-lease
 
 [branch]
   sort = -committerdate

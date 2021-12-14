@@ -3,6 +3,8 @@
 
 ## git
 
+alias g='git'
+
 ### working copy (status)
 
 alias gws='git status'
