@@ -5,6 +5,7 @@
 # by both login and interactive shells, unlike .zshrc.
 
 source ~/dotfiles/shell/common.sh
+source ~/dotfiles/shell/zsh/keys.sh
 
 fpath+="$HOME/dotfiles/shell/zsh/functions"
 
