@@ -10,6 +10,7 @@
   c = commit
   co = checkout
   d = diff
+  l = log --name-only --oneline
   r = branch --sort=committerdate
   s = status
   shove = push --force-with-lease
