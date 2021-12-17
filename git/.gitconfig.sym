@@ -1,6 +1,7 @@
 [core]
   editor = vim
   autocrlf = input
+  commitGraph = true
 
 [alias]
   default-branch = !git symbolic-ref refs/remotes/origin/HEAD | cut -f4 -d/
@@ -33,3 +34,18 @@
 # Extra config if path includes "shopify"
 [includeIf "gitdir/i:**/shopify/**"]
   path = ~/dotfiles/git/shopify
+
+[diff]
+  algorithm = patience
+
+[gc]
+  writeCommitGraph = true
+
+[protocol]
+  version = 2
+
+[gpg]
+  program = gpg
+
+[commit]
+  gpgsign = true
