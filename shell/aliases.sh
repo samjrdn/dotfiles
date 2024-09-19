@@ -1,6 +1,9 @@
 #!/bin/false
 # shellcheck shell=bash
 
+alias k='kubectl'
+alias cb='git branch --sort=-committerdate | fzf --header Checkout | xargs git checkout'
+
 ## git
 
 alias g='git'
