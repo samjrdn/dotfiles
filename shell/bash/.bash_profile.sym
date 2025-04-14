@@ -4,12 +4,14 @@
 # by both login and interactive shells, unlike .bashrc.
 
 source ~/dotfiles/shell/common.sh
-source ~/dotfiles/shell/bash/functions/cecho
-source ~/dotfiles/shell/bash/functions/chevrons
-source ~/dotfiles/shell/bash/functions/git_info
+# source ~/dotfiles/shell/bash/functions/cecho
+# source ~/dotfiles/shell/bash/functions/chevrons
+# source ~/dotfiles/shell/bash/functions/git_info
 
-## prompt
+# ## prompt
 
-PROMPT_DIRTRIM=2
+# PROMPT_DIRTRIM=2
 
-export PS1='$(cecho "\w" cyan) $(git_info)$(chevrons) '
+# export PS1='$(cecho "\w" cyan) $(git_info)$(chevrons) '
+
+eval "$(mise activate bash)"

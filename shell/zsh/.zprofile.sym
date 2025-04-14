@@ -21,3 +21,7 @@ setopt prompt_subst
 
 export PS1; PS1='$(truncated_path) $(chevrons) '
 export RPROMPT; RPROMPT='$(git_info)'
+
+eval "$(mise activate zsh)"
+
+export PATH="$PATH:$HOME/dotfiles/bin"

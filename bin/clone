@@ -1,0 +1,23 @@
+#! /usr/bin/env bash
+
+if ! command -v gh &> /dev/null; then
+  echo "The GitHub CLI tool 'gh' is required but not installed."
+  echo "To install it, run:"
+  echo "  brew install gh"
+  echo "Then authenticate with:"
+  echo "  gh auth login"
+  exit 1
+fi
+
+if [ -z "$1" ]; then
+  echo "Usage: clone <repo>"
+  exit 1
+fi
+
+name_with_owner=$(gh repo view $1 --json nameWithOwner --jq .nameWithOwner) || exit 1
+repo_path=$HOME/src/github.com/$name_with_owner
+
+gh repo clone $name_with_owner $repo_path || exit 1
+
+echo "To change to the repository directory, run:"
+echo "  cd $repo_path"
